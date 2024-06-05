@@ -16,10 +16,17 @@ public class RestExceptionHandler {
                 .body(new ErrorDto(ex.getMessage()));
 
     }
+    @ExceptionHandler(value = {BadCurrencyAskException.class})
+    @ResponseBody
+    public ResponseEntity<ErrorDto> handleExceptionRequestWithWrongData(BadCurrencyAskException ex) {
+        return ResponseEntity.status(ex.getStatus())
+                .body(new ErrorDto(ex.getMessage()));
+
+    }
 
     @Getter
     class ErrorDto {
-        private String message;
+        private final String message;
 
         public ErrorDto(String message) {
             this.message = message;

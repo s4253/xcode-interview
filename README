@@ -1,0 +1,10 @@
+Kod można udoskonalić o :
+- wszelkie url-e nbp powinny być w pliku properties
+- można wprowadzić warstwę walidacji requesta
+- żeby kod był w pełni testowalny, część serwisu odpowiedzialna za request do NBP api, powinna być w osobnej klasie
+- stringi z komunikatami powinny być w osobnej klasie statycznej
+- wyjatki na front powinny mieć zwracany też kod błędu, łatwiej byłoby wyświetlić stosowny komunikat
+
+- na froncie mozna uzyć angularowego bootstrapa lub innego frameworka ala toaster do komunikatów.
+- front trzeba uruchomić npm start, ponieważ dodane zostało proxy conf, dla ułatwienia.
+- na froncie powinna być oczywiście validacja wraz z elementami typu FormControl
